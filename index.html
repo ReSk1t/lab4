@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кнопки на сайте</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50; /* Зеленый */
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #367c39; /* Более темный зеленый */
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Пример кнопок</h1>
+
+    <div class="container">
+        <button id="button1">Кнопка 1</button>
+        <button id="button2">Кнопка 2</button>
+        <button id="button3">Кнопка 3</button>
+    </div>
+
+    <div id="output">Нажмите на кнопку!</div>
+
+    <script>
+        const button1 = document.getElementById('button1');
+        const button2 = document.getElementById('button2');
+        const button3 = document.getElementById('button3');
+        const output = document.getElementById('output');
+
+        button1.addEventListener('click', () => {
+            output.textContent = 'Вы нажали на кнопку 1!';
+        });
+
+        button2.addEventListener('click', () => {
+            output.textContent = 'Вы нажали на кнопку 2!';
+        });
+
+        button3.addEventListener('click', () => {
+            output.textContent = 'Вы нажали на кнопку 3!';
+        });
+    </script>
+
+</body>
+</html>
